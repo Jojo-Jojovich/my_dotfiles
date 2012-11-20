@@ -1,0 +1,47 @@
+# Disable the startup message
+startup_message off
+
+# set a big scrolling buffer
+defscrollback 5000
+# Set the caption on the bottom line
+# caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %LM %d - %c"
+caption always "%{= kw}%?%-w%?%{+b wk}%n %t%?(%u)%?%{= kw}%?%+w%?"
+
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+
+#screen -t cmsq1 0 ssh cmsq1
+#exec ~/screen-ssh-agent
+#exec true
+#source ~/.ssh/screen_agent
+
+screen 0
+screen 1
+screen 2
+screen 3
+
+# And a few empty shells.
+
+# This is the initial window
+select 0
+
+# Insane statusline
+# hardstatus alwayslastline "%{ck}%?%-w%?[%n*%f %t]%?%+Lw%?%=| %D %d.%m.%y - %c "
+# hardstatus alwayslastline "%{kr} %H %{ky} load[%l] %{kg} %d.%m.%Y %c %{+b}%{yb} %=%?%-w%?[%n%f %t]%?%+w%? "
+
+# Nice statusline:
+hardstatus lastline  "%{ck}%?%-w%?[%n*%f %t]%?%+Lw%?"
+# Even nicer lastline :-)
+# hardstatus lastline  "%{+b ck} %?%-w%?%{-b}%n%f %t%{+b} %?%+w%? %= %l   %D %d/%m/%Y   %0c "
+# hardstatus lastline  "%{-b ck} %?%-w%?%{+b}%n%f %t%{-b} %?%+w%? %= %l   %D %d/%m/%Y   %0c "
+hardstatus alwayslastline  "%{+b kr}[%H] %{kg}[%n %t]%{kb} %-= %LD, %LM %d %Y  %C%a"
+hardstatus on
+sorendition gK
+
+# Turn UTF-8 on by default?
+defutf8 on
+
+# Bind ctrl-left and ctrl-right to prev/next screens
+bindkey "^[[D" prev
+bindkey "^[[C" next
