@@ -48,7 +48,7 @@ COLOR yes
  
 NORMAL 00       # Global default
 FILE 00         # Normal file
-DIR 40;33        # Directory (DEFAULT: 01;34 - CHANGED S.M.)
+DIR 01;34        # Directory (DEFAULT: 01;34 - CHANGED S.M.)
 LINK 01;36      # Symbolic link.
 FIFO 40;33      # Pipe
 SOCK 01;35      # Socket
@@ -64,8 +64,6 @@ EXEC 01;32
 # like ls to colorize below. Put the extension, a space, and
 # the color init string (and any comments you want to add after 
 # a '#').
- 
- 
  
 # USER DEFINED
  
