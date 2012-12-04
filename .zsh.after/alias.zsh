@@ -4,6 +4,8 @@ unalias grc
 unalias gls
 alias hist='history 1'
 
+alias v='f -e vim' # quick opening files with vim
+
 # grc overides for ls
 #   Made possible through contributions from generous benefactors like
 #   `brew install coreutils`
