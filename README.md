@@ -9,4 +9,3 @@ This WILL move your .vim settings and directory to a backup folder so it'd be
 better if you installed yadr first and then vim
 
 Also, copy in the prompt file to ~/.zprezto/modules/prompt/
-
