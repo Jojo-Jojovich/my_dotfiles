@@ -15,4 +15,3 @@ Updated the .secrets file as noted as the yadr link
 
 Also, copy in the prompt file to ~/.zprezto/modules/prompt/functions
 
-I'm adding this line to test Kanbanary
